@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %} - Blood Donations</title>
+    <link rel="icon" type="image/x-icon" href="/static/3595788.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+</head>
+<body>
+<!-- navigate through pages -->
+<nav>
+    <a href="{{ url_for('index') }}">Home</a>
+    <a href="{{ url_for('requests') }}">Requests</a>
+
+</nav>
+<hr class="hr1">
+
+<div class="content">
+    {% block content %} {% endblock %}
+</div>
+
+
+<h1>Blood Donation Form</h1>
+
+<form id="donation-form" method="POST">
+    <label for="Id">Id:</label>
+    <input type="id" id="id" name="ID" required>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" required>
+    <label for="blood-group">Blood Group:</label>
+    <select id="blood-group" name="blood-group" required>
+        <option value="">Select a blood group</option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+    </select>
+    <label for="last-donation-date">Donation Date:</label>
+    <input type="date" id="last-donation-date" name="last-donation-date" required>
+    <button type="submit" style="position: relative;left: 400px;" onclick="myFunction()">Submit</button>
+    <script>
+        function myFunction() {
+            alert("Submitted");
+        }
+    </script>
+</form>
+
+
+{#pop up message #}
+<div class="center">
+    <input type="checkbox" id="click">
+    <label for="click" class="click-me">Multiple Casualty Incident </label>
+    <div class="content">
+        <div class="text">
+            Multiple Casualty Incident
+        </div>
+        <label for="click" id="temp">x</label>
+        <form method="POST" id="mci_form">
+            <label for="amount">Amount:(only blood type O-)</label>
+            <input type="number" placeholder="amount" id="amount">
+            <button type="submit_form"> Submit</button>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>
+
+{#multiple casualty incident#}

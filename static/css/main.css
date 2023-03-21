@@ -1,0 +1,325 @@
+/* Global Styles */
+body {
+    background-image: url("/static/background.jpg");
+    height: 1000px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+hr.hr1 {
+    border-top: 1px dashed red;
+}
+
+h1 {
+    font-family: Serif;
+    font-size: 30px;
+    color: red;
+    text-align: center;
+}
+
+
+/* Navigation Styles */
+nav {
+    overflow: hidden;
+
+}
+
+
+nav a {
+    font-size: 25px;
+    display: inline;
+    color: #333;
+    text-align: left;
+    padding: 100px;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #c00000;
+    color: #fff;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* CTA Button Styles */
+.cta-button {
+    display: inline-block;
+    background-color: #c00000;
+    color: #fff;
+    padding: 100000px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #a00000;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type = "id"],
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f5f5f5;
+    color: #333;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+select option[value=""] {
+    color: #888;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+}
+
+
+button[type="submit"]:hover {
+    background-color: #a00000;
+}
+
+form[type = "mci_form"] {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/*label {*/
+/*    display: block;*/
+/*    font-size: 16px;*/
+/*    margin-bottom: 5px;*/
+/*    color: #333;*/
+/*}*/
+
+
+/*label {*/
+/*    display: block;*/
+/*    font-size: 16px;*/
+/*    margin-bottom: 5px;*/
+/*    color: #333;*/
+/*}*/
+
+
+.first-button {
+    color: rgb(3, 48, 146);
+    font-size: 25px;
+    font-weight: 500;
+    padding: 15px 50px;
+    border-radius: 5px;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #dadadb;
+    transition: box-shadow .35s ease !important;
+    outline: none;
+}
+
+.first-button:active {
+    background-color: rgb(2, 42, 112);
+    color: #fff;
+    border: none;
+}
+
+
+/*Trigger Button*/
+
+.center, .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.click-me {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: 400px;
+    margin-left: 450px;
+    display: block;
+    width: 400px;
+    height: 50px;
+    background: #dde1e7;
+    box-shadow: -3px -3px 7px #fffdfdcc, 3px 3px 5px rgba(94, 104, 121, 0.342);
+    text-align: center;
+    font-size: 22px;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+#click {
+    display: none;
+}
+
+.click-me:hover {
+    color: #0a5878;
+}
+
+.content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: 200px;
+    margin-left: 650px;
+    visibility: hidden;
+    width: 400px;
+    height: auto;
+    background: #dde1e7;
+    padding: 30px 35px 40px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#temp {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    font-size: 25px;
+    background: #dde1e7;
+    padding: 3px;
+    padding-left: 11px;
+    padding-right: 11px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#click:checked ~ .content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.text {
+    font-size: 30px;
+    color: #000000;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+/* form {
+    margin-top: 40px;
+} */
+
+/* label {
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+} */
+
+input {
+    display: block;
+    height: 43px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.07);
+    border-radius: 3px;
+    border: none;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+::placeholder {
+    color: #4b4e4d;
+    padding-left: 10px;
+}
+
+
+button[type= "submit_form"] {
+    width: 100%;
+    margin-top: 35px;
+    padding: 12px;
+    background: #dde1e7;
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 32px;
+}
+
+
