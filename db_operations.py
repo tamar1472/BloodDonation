@@ -1,6 +1,8 @@
 import flask
 import mysql.connector
+from datetime import datetime
 
+now = datetime.now()
 # database connection
 connection = mysql.connector.connect(host="localhost", user="tamar", passwd="123456", database="blood_donation")
 
@@ -18,10 +20,15 @@ alternative_dict = {'O-': [],
 
 # inserting data to db
 def add_text(id, name, phone, blood, donation_date):
-    insert = "INSERT INTO donors (donor_id, donor_name,donor_phone, blood_type, last_donation_date, eligibility_status) VALUES (%s,%s,%s,%s,%s,%s)"
-    cursor.execute(insert, (id, name, phone, blood, donation_date, "Eligible"))
-    connection.commit()
-    return 1
+    try:
+        insert = "INSERT INTO donors (donor_id, donor_name,donor_phone, blood_type, last_donation_date, eligibility_status) VALUES (%s,%s,%s,%s,%s,%s)"
+        cursor.execute(insert, (id, name, phone, blood, donation_date, "Eligible"))
+        connection.commit()
+        flask.flash("Blood Donation Accepted!", 'success')
+        return "Blood Donation Accepted!"
+    except mysql.connector.Error as e:
+        flask.flash(str(e), 'error')
+        return "ERROR:{}".format(e)
 
 
 def get_data(blood, amount, request_date):
@@ -57,7 +64,6 @@ def get_data(blood, amount, request_date):
         cursor.execute(update_query, (row[0],))
 
     connection.commit()
-
     print(len(rows))
     for r in rows:
         print(r)
@@ -71,17 +77,25 @@ def mci(amount):
     cursor.execute(fetch, (amount,))
     rows = cursor.fetchall()
     if len(rows) != amount:
-        flask.flash("Not enough donations for this blood type O-")
+        flask.flash("Not enough donations for this blood type O-", 'error')
         return "Not enough donations for this blood type O-"
 
     # insert to donations
     for row in rows:
         print(row)
         insert_query = "INSERT INTO donations (donation_id,donor_id,donation_date, blood_type) VALUES (DEFAULT,%s, %s, %s)"
-        cursor.execute(insert_query, (row[0], row[2], row[3]))
+        cursor.execute(insert_query, (row[0], now, row[3]))  # row 4 to today date
         update_query = "UPDATE donors SET eligibility_status = 'Not Eligible' WHERE donor_id = %s;"
         cursor.execute(update_query, (row[0],))
 
     connection.commit()
-    flask.flash("Moved {} rows with blood type O-".format(min(len(rows), amount)))
+    flask.flash("Moved {} rows with blood type O-".format(min(len(rows), amount)), 'success')
     return "Moved {} rows with blood type O-".format(min(len(rows), amount))
+
+
+def showTable():
+    blood_type = {}
+    for t in alternative_dict.keys():
+        cursor.execute("SELECT COUNT(*) FROM donors WHERE eligibility_status = 'Eligible' and blood_type = %s", (t,))
+        blood_type[t] = cursor.fetchall()[0][0]
+    return blood_type

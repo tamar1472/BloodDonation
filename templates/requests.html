@@ -5,21 +5,20 @@
     <title>{% block title %} {% endblock %} - Schedule Blood Transfer </title>
     <link rel="icon" type="image/x-icon" href="/static/3595788.png">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/requests.css') }}">
-
-
 </head>
-<body>
 
+<body>
 <!-- navigate through pages -->
 <nav>
     <a href="{{ url_for('index') }}">Home</a>
     <a href="{{ url_for('requests') }}">Requests</a>
-
-    <hr class="hr2">
 </nav>
+<hr class="hr2">
+
 <div class="content">
     {% block content %} {% endblock %}
 </div>
+
 <h1>Blood Request Form</h1>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
@@ -89,6 +88,27 @@
     {#    </script>#}
 
 </form>
+
+<img src="/static/Images/compatible-blood-donors.jpg" alt="x">
+
+
+<table class="styled_table">
+    <caption>Available Blood types</caption>
+    <thead>
+    <tr>
+        <th>Blood Type</th>
+        <th>Amount</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for row in output_data %}
+        <tr class="active-row">
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
 
 
 </body>

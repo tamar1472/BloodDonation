@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>{% block title %} {% endblock %} - Blood Donations</title>
     <link rel="icon" type="image/x-icon" href="/static/3595788.png">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-
 </head>
+
 <body>
 <!-- navigate through pages -->
 <nav>
@@ -22,6 +22,42 @@
 
 
 <h1>Blood Donation Form</h1>
+{#link to css of the message#}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous">
+{#if message is error#}
+{% with errors = get_flashed_messages(category_filter=["error"]) %}
+    {% if errors %}
+        <div class="alert alert-danger alert-dismissible fade show"
+             role="alert">
+            <ul>
+                {%- for msg in errors %}
+                    <li>{{ msg }}</li>
+                {% endfor -%}
+            </ul>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"
+                    aria-label="Close"></button>
+        </div>
+    {% endif %}
+{% endwith %}
+{#if message is success#}
+{% with messages = get_flashed_messages(category_filter=["success"]) %}
+    {% if messages %}
+        <div class="alert alert-success alert-dismissible fade show"
+             role="alert">
+            <ul>
+                {%- for msg in messages %}
+                    <li>{{ msg }}</li>
+                {% endfor -%}
+            </ul>
+
+            <button type="button" class="btn-close" data-bs-dismiss="alert"
+                    aria-label="Close"></button>
+        </div>
+    {% endif %}
+{% endwith %}
 
 <form id="donation-form" method="POST">
     <label for="Id">Id:</label>
@@ -44,12 +80,12 @@
     </select>
     <label for="last-donation-date">Donation Date:</label>
     <input type="date" id="last-donation-date" name="last-donation-date" required>
-    <button type="submit" style="position: relative;left: 400px;" onclick="myFunction()">Submit</button>
-    <script>
-        function myFunction() {
-            alert("Submitted");
-        }
-    </script>
+    <input type="hidden" id="sub_type" name="sub_type" value="0">
+    <button type="submit" style="position: relative;left: 320px;">Submit</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"></script>
 </form>
 
 
@@ -64,8 +100,13 @@
         <label for="click" id="temp">x</label>
         <form method="POST" id="mci_form">
             <label for="amount">Amount:(only blood type O-)</label>
-            <input type="number" placeholder="amount" id="amount">
+            <input type="number" id="amount" name="amount" placeholder="amount">
+            <input type="hidden" id="sub_type" name="sub_type" value="1">
             <button type="submit_form"> Submit</button>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+                    crossorigin="anonymous"></script>
         </form>
     </div>
 </div>
@@ -74,4 +115,3 @@
 </body>
 </html>
 
-{#multiple casualty incident#}

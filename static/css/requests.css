@@ -1,6 +1,6 @@
 /* Global Styles */
 body {
-    background-image: url("/static/background2.jpg");
+    background-image: url("/static/Images/background2.jpg");
     height: 1000px;
     background-position: center;
     background-repeat: no-repeat;
@@ -152,3 +152,50 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #a00000;
 }
+
+img {
+    display: block;
+    max-width: 40%;
+    margin-right: 30px;
+    margin-top: 50px;
+
+}
+
+caption {
+    caption-side: top;
+    display: table-caption;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.styled_table {
+    border-collapse: separate;
+    font-style: italic;
+    border-radius: 10px;
+    margin-left: 150px;
+    padding: 10px;
+    border: 3px solid;
+    margin-top: -450px;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border-radius: 10px;
+    padding: 10px;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black;
+}
+
+th {
+    text-align: center;
+}
+
+thead th {
+
+    background-color: #55608f;
+}
+

@@ -1,11 +1,11 @@
 from flask import Flask, render_template, request, url_for, redirect, flash
-from db_operations import add_text, get_data, mci
+from db_operations import add_text, get_data, mci, showTable
 
 import mysql.connector
 from mysql.connector import Error
 
 app = Flask(__name__)
-app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
+app.secret_key = 'mysecretkey'
 try:
     connection = mysql.connector.connect(user='tamar', password='123456', host='127.0.0.1', port=3306,
                                          database='blood_donation',
@@ -29,26 +29,28 @@ except Error as e:
 def index():
     print(request.method)
     if request.method == "POST":
-        print(request.form)
+        print(request.form["sub_type"])
+        if request.form["sub_type"] == '0':
+            id = request.form["ID"]
+            print(id)
+            name = request.form["name"]
+            print(name)
+            phone = request.form["phone"]
+            print(phone)
+            blood = request.form.get("blood-group")
+            print(blood)
+            donation_date = request.form.get("last-donation-date")
+            print(donation_date)
+            # saving all the values to db
+            add_text(id, name, phone, blood, donation_date)
+            print(request.form)
+            return render_template('index.html')
+        else:
 
-        id = request.form["ID"]
-        print(id)
-        name = request.form["name"]
-        print(name)
-        phone = request.form["phone"]
-        print(phone)
-        blood = request.form.get("blood-group")
-        print(blood)
-        donation_date = request.form.get("last-donation-date")
-        print(donation_date)
-        # saving all the values to db
-        add_text(id, name, phone, blood, donation_date)
-        print(request.form)
-
-        amount = request.form["amount"]
-        print(amount)
-        mci(amount)
-        return render_template('index.html')
+            amount = int(request.form["amount"])
+            print(amount)
+            mci(amount)
+            return render_template('index.html')
     else:
         return render_template('index.html')
 
@@ -59,12 +61,14 @@ def requests():
         blood = request.form.get("blood-group")
         request_date = request.form.get("Request Date")
         amount = int(request.form.get("amount"))
-        dat = get_data(blood, amount, request_date)
-        print(dat)
-        return redirect(url_for('requests'))
+        get_data(blood, amount, request_date)
+        temp = showTable()
+        return render_template('requests.html', output_data=temp.items())
         # return render_template('requests.html', data=dat)
     else:
-        return render_template('requests.html')
+        temp = showTable()
+        print(temp)
+        return render_template('requests.html', output_data=temp.items())
 
 
 if __name__ == '__main__':
