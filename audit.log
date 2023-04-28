@@ -1,0 +1,9 @@
+2023-04-23 18:32:39,529 : ADMIN Connected to MySQL Server
+2023-04-23 18:32:53,990 : ADMIN ADDED USER: Blood Donated: id = 67567, name = fdh gfh, blood type = 5467567, donation date = B-
+2023-04-23 18:33:06,813 : ADMIN REQUESTED BLOOD: blood type = A+, amount = 1
+2023-04-23 18:33:18,258 : ERROR: Not enough blood type A+
+2023-04-23 18:33:41,286 : ADMIN ADDED USER: Blood Donated: id = 456456, name = gfhfgh, blood type = 234234, donation date = AB+
+2023-04-23 18:33:59,864 : ERROR:1062 (23000): Duplicate entry '6747-2023-04-18' for key 'donors.PRIMARY'
+2023-04-23 18:34:13,114 : Multiple Casualty Incident, donated 1 amounts of O-
+2023-04-23 18:34:20,829 : ERROR: Not enough O- blood
+2023-04-23 18:34:49,893 : ADMIN REQUESTED BLOOD: blood type = B+, amount = 2
