@@ -116,5 +116,11 @@ def requests():
         return render_template('requests.html', output_data=temp.items())
 
 
+# Convert audit.log to audit.txt
+if os.path.exists('audit.log'):
+    with open('audit.log', 'r') as log_file:
+        with open('audit.txt', 'w') as txt_file:
+            txt_file.write(log_file.read())
+
 if __name__ == '__main__':
     app.run(debug=True)
