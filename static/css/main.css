@@ -167,22 +167,19 @@ form[type = "mci_form"] {
     margin-bottom: 20px;
 }
 
-/*label {*/
-/*    display: block;*/
-/*    font-size: 16px;*/
-/*    margin-bottom: 5px;*/
-/*    color: #333;*/
-/*}*/
-
-
-/*label {*/
-/*    display: block;*/
-/*    font-size: 16px;*/
-/*    margin-bottom: 5px;*/
-/*    color: #333;*/
-/*}*/
-
-
+input[type="number"]
+    /*label {*/
+    /*    display: block;*/
+    /*    font-size: 16px;*/
+    /*    margin-bottom: 5px;*/
+    /*    color: #333;*/
+    /*}*/
+    /*label {*/
+    /*    display: block;*/
+    /*    font-size: 16px;*/
+    /*    margin-bottom: 5px;*/
+    /*    color: #333;*/
+    /*}*/
 .first-button {
     color: rgb(3, 48, 146);
     font-size: 25px;

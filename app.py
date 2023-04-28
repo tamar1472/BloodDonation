@@ -1,11 +1,27 @@
+import flask
 from flask import Flask, render_template, request, url_for, redirect, flash
-from db_operations import add_text, get_data, mci, showTable
+import db_operations
 
+import logging
+from logging.handlers import RotatingFileHandler
 import mysql.connector
 from mysql.connector import Error
 
 app = Flask(__name__)
 app.secret_key = 'mysecretkey'
+
+# Disable Werkzeug logs in the console
+werkzeug_logger = logging.getLogger('werkzeug')
+werkzeug_logger.propagate = False
+# Set up the logger
+logging.basicConfig(filename='audit.log', level=logging.INFO,
+                    format=f'%(asctime)s : %(message)s')
+
+# handler = RotatingFileHandler('audit.log', maxBytes=10000, backupCount=1)
+# handler.setLevel(logging.DEBUG)
+# app.logger.addHandler(handler)
+# app.logger.addHandler(logging.StreamHandler())
+
 try:
     connection = mysql.connector.connect(user='tamar', password='123456', host='127.0.0.1', port=3306,
                                          database='blood_donation',
@@ -17,7 +33,7 @@ try:
         cursor.execute("select database();")
         record = cursor.fetchone()
         print("You're connected to database: ", record)
-
+        app.logger.info("ADMIN Connected to MySQL Server")
         # cursor.close()
         # connection.close()
         # print("MySQL connection is closed")
@@ -42,14 +58,27 @@ def index():
             donation_date = request.form.get("last-donation-date")
             print(donation_date)
             # saving all the values to db
-            add_text(id, name, phone, blood, donation_date)
+            result = db_operations.add_text(id, name, phone, blood, donation_date)
             print(request.form)
+            if result[0] == 1:
+                app.logger.info(
+                    'ADMIN ADDED USER: Blood Donated: id = {}, name = {}, blood type = {}, donation date = {}'.format(
+                        id,
+                        name,
+                        phone,
+                        blood,
+                        donation_date))
+            else:
+                app.logger.info(result[1])
             return render_template('index.html')
         else:
-
             amount = int(request.form["amount"])
             print(amount)
-            mci(amount)
+            result = db_operations.mci(amount)
+            if result[0] == 1:
+                app.logger.info('Multiple Casualty Incident, donated {} amounts of O-'.format(amount))
+            else:
+                app.logger.info('ERROR: Not enough O- blood')
             return render_template('index.html')
     else:
         return render_template('index.html')
@@ -61,12 +90,17 @@ def requests():
         blood = request.form.get("blood-group")
         request_date = request.form.get("Request Date")
         amount = int(request.form.get("amount"))
-        get_data(blood, amount, request_date)
-        temp = showTable()
+        result = db_operations.get_data(blood, amount, request_date)
+        temp = db_operations.showTable()
+        if result[0] == 1:
+            app.logger.info(
+                'ADMIN REQUESTED BLOOD: blood type = {}, amount = {}'.format(blood, amount))
+        else:
+            app.logger.info('ERROR: Not enough blood type {}'.format(blood))
         return render_template('requests.html', output_data=temp.items())
         # return render_template('requests.html', data=dat)
     else:
-        temp = showTable()
+        temp = db_operations.showTable()
         print(temp)
         return render_template('requests.html', output_data=temp.items())
 

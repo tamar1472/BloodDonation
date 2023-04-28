@@ -12,7 +12,6 @@
 <nav>
     <a href="{{ url_for('index') }}">Home</a>
     <a href="{{ url_for('requests') }}">Requests</a>
-
 </nav>
 <hr class="hr1">
 
@@ -100,7 +99,7 @@
         <label for="click" id="temp">x</label>
         <form method="POST" id="mci_form">
             <label for="amount">Amount:(only blood type O-)</label>
-            <input type="number" id="amount" name="amount" placeholder="amount">
+            <input type="number" id="amount" name="amount" placeholder="amount" required>
             <input type="hidden" id="sub_type" name="sub_type" value="1">
             <button type="submit_form"> Submit</button>
 
