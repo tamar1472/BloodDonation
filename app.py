@@ -1,9 +1,9 @@
-import flask
+import os
+
 from flask import Flask, render_template, request, url_for, redirect, flash
 import db_operations
 
 import logging
-from logging.handlers import RotatingFileHandler
 import mysql.connector
 from mysql.connector import Error
 
@@ -13,14 +13,22 @@ app.secret_key = 'mysecretkey'
 # Disable Werkzeug logs in the console
 werkzeug_logger = logging.getLogger('werkzeug')
 werkzeug_logger.propagate = False
-# Set up the logger
-logging.basicConfig(filename='audit.log', level=logging.INFO,
-                    format=f'%(asctime)s : %(message)s')
 
-# handler = RotatingFileHandler('audit.log', maxBytes=10000, backupCount=1)
-# handler.setLevel(logging.DEBUG)
-# app.logger.addHandler(handler)
-# app.logger.addHandler(logging.StreamHandler())
+# Set up a logger for general application logging
+app_logger = logging.getLogger(__name__)
+app_logger.setLevel(logging.INFO)
+app_file_handler = logging.FileHandler('audit.log')
+app_formatter = logging.Formatter('%(asctime)s  : %(message)s')
+app_file_handler.setFormatter(app_formatter)
+app_logger.addHandler(app_file_handler)
+
+# Set up a logger for blood table logging
+blood_logger = logging.getLogger('blood_table')
+blood_logger.setLevel(logging.INFO)
+blood_file_handler = logging.FileHandler('blood_table.log')
+blood_formatter = logging.Formatter('%(asctime)s : %(message)s')
+blood_file_handler.setFormatter(blood_formatter)
+blood_logger.addHandler(blood_file_handler)
 
 try:
     connection = mysql.connector.connect(user='tamar', password='123456', host='127.0.0.1', port=3306,
@@ -93,15 +101,18 @@ def requests():
         result = db_operations.get_data(blood, amount, request_date)
         temp = db_operations.showTable()
         if result[0] == 1:
-            app.logger.info(
+            app_logger.info(
                 'ADMIN REQUESTED BLOOD: blood type = {}, amount = {}'.format(blood, amount))
         else:
-            app.logger.info('ERROR: Not enough blood type {}'.format(blood))
+            app_logger.info('ERROR: Not enough blood type {}'.format(blood))
+        blood_logger.info(temp)
+
         return render_template('requests.html', output_data=temp.items())
         # return render_template('requests.html', data=dat)
     else:
         temp = db_operations.showTable()
-        print(temp)
+        blood_logger.info(temp)
+        # print(temp)
         return render_template('requests.html', output_data=temp.items())
 
 

@@ -1,7 +1,16 @@
+import logging
 import flask
 import mysql.connector
 from datetime import datetime
 import pandas as pd
+
+# Disable Werkzeug logs in the console
+logger = logging.getLogger(__name__)
+werkzeug_logger = logging.getLogger('werkzeug')
+werkzeug_logger.propagate = False
+# Set up the logger
+logging.basicConfig(filename='available_blood.log', level=logging.INFO,
+                    format=f'%(asctime)s : %(message)s')
 
 now = datetime.now()
 # database connection
@@ -100,39 +109,3 @@ def showTable():
         cursor.execute("SELECT COUNT(*) FROM donors WHERE eligibility_status = 'Eligible' and blood_type = %s", (t,))
         blood_type[t] = cursor.fetchall()[0][0]
     return blood_type
-
-# def audit_donation_trail():
-#     # Execute the query
-#     cursor.execute("SELECT * FROM audit_donation_log ORDER BY donation_id DESC LIMIT 100;")
-#     # Fetch the results
-#     results = cursor.fetchall()
-#     # Open a text file for writing
-#     with open("audit_log.txt", "w") as f:
-#         f.write("---------------audit donation log------------------\n")
-#         # Write the results to the text file
-#         for row in results:
-#             f.write("ADMIN: %s\n" % str(row))
-#
-#
-# def audit_donor_trail():
-#     # Execute the query
-#     cursor.execute("SELECT * FROM audit_donor_log ORDER BY donor_id DESC LIMIT 100;")
-#     # Fetch the results
-#     results = cursor.fetchall()
-#     # Open a text file for writing
-#     with open("audit_log.txt", "w") as f:
-#         # Write the results to the text file
-#         f.write("---------------audit donor log------------------\n")
-#         for row in results:
-#             f.write("ADMIN: %s\n" % str(row))
-#
-
-# def audit_trail():
-#     donations = pd.read_sql_table('donations', con=connection)
-#     donors = pd.read_sql_table('donors', con=connection)
-#     latest_donations = donations.loc[donations['donation_date'] == donations['donation_date'].max()]
-#     latest_donors = donors.loc[donors['last_donation_date'] == donors['last_donation_date'].max()]
-#     latest_rows = pd.concat([latest_donations, latest_donors], axis=1)
-#     filename = 'latest_rows_' + datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S') + '.txt'
-#     latest_rows.to_csv(filename, sep='\t', index=False)
-#     connection.close()

@@ -1,9 +1,21 @@
-2023-04-23 18:32:39,529 : ADMIN Connected to MySQL Server
-2023-04-23 18:32:53,990 : ADMIN ADDED USER: Blood Donated: id = 67567, name = fdh gfh, blood type = 5467567, donation date = B-
-2023-04-23 18:33:06,813 : ADMIN REQUESTED BLOOD: blood type = A+, amount = 1
-2023-04-23 18:33:18,258 : ERROR: Not enough blood type A+
-2023-04-23 18:33:41,286 : ADMIN ADDED USER: Blood Donated: id = 456456, name = gfhfgh, blood type = 234234, donation date = AB+
-2023-04-23 18:33:59,864 : ERROR:1062 (23000): Duplicate entry '6747-2023-04-18' for key 'donors.PRIMARY'
-2023-04-23 18:34:13,114 : Multiple Casualty Incident, donated 1 amounts of O-
-2023-04-23 18:34:20,829 : ERROR: Not enough O- blood
-2023-04-23 18:34:49,893 : ADMIN REQUESTED BLOOD: blood type = B+, amount = 2
+
+2023-04-28 11:43:44,353  : ADMIN Connected to MySQL Server
+2023-04-28 11:44:12,594  : ADMIN ADDED USER: Blood Donated: id = 56546, name = fghfgh, blood type = 546456, donation date = AB-
+2023-04-28 11:44:32,960  : ERROR: Not enough blood type A+
+2023-04-28 11:44:43,789  : ADMIN REQUESTED BLOOD: blood type = AB+, amount = 1
+2023-04-28 11:45:11,188  : ADMIN Connected to MySQL Server
+2023-04-28 11:45:38,935  : ADMIN ADDED USER: Blood Donated: id = 675677, name = hjhjhjg, blood type = 456456, donation date = A+
+2023-04-28 11:45:50,289  : ADMIN ADDED USER: Blood Donated: id = 46456456, name = hjghj, blood type = 67567, donation date = A-
+2023-04-28 11:45:59,234  : ERROR: Not enough O- blood
+2023-04-28 11:46:27,531  : ADMIN REQUESTED BLOOD: blood type = AB+, amount = 2
+2023-04-28 11:47:06,638  : ADMIN Connected to MySQL Server
+2023-04-28 11:47:31,435  : ADMIN ADDED USER: Blood Donated: id = 56456456, name = hgfhfgh, blood type = 456456, donation date = A+
+2023-04-28 11:53:39,313  : ADMIN Connected to MySQL Server
+2023-04-28 11:54:16,989  : ADMIN Connected to MySQL Server
+2023-04-28 11:55:45,164  : ADMIN Connected to MySQL Server
+2023-04-28 11:55:45,164  : The program has finished running.
+2023-04-28 11:55:57,719  : ADMIN Connected to MySQL Server
+2023-04-28 11:55:57,720  : The program has finished running.
+2023-04-28 11:59:58,597  : ADMIN Connected to MySQL Server
+2023-04-28 12:02:52,868  : ADMIN Connected to MySQL Server
+2023-04-28 12:03:27,834  : ADMIN ADDED USER: Blood Donated: id = 657567567, name = fghfgh, blood type = 5447567, donation date = A-
