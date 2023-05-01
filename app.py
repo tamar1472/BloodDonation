@@ -1,6 +1,8 @@
+import csv
+import io
 import os
 
-from flask import Flask, render_template, request, url_for, redirect, flash
+from flask import Flask, render_template, request, url_for, redirect, flash, make_response, Response
 import db_operations
 
 import logging
@@ -16,7 +18,8 @@ werkzeug_logger.propagate = False
 
 # Set up a logger for general application logging
 app_logger = logging.getLogger(__name__)
-app_logger.setLevel(logging.INFO)
+app_logger.setLevel(logging.ERROR)
+app_logger.propagate = False
 app_file_handler = logging.FileHandler('audit.log')
 app_formatter = logging.Formatter('%(asctime)s  : %(message)s')
 app_file_handler.setFormatter(app_formatter)
@@ -24,7 +27,7 @@ app_logger.addHandler(app_file_handler)
 
 # Set up a logger for blood table logging
 blood_logger = logging.getLogger('blood_table')
-blood_logger.setLevel(logging.INFO)
+blood_logger.setLevel(logging.ERROR)
 blood_file_handler = logging.FileHandler('blood_table.log')
 blood_formatter = logging.Formatter('%(asctime)s : %(message)s')
 blood_file_handler.setFormatter(blood_formatter)
@@ -41,7 +44,7 @@ try:
         cursor.execute("select database();")
         record = cursor.fetchone()
         print("You're connected to database: ", record)
-        app.logger.info("ADMIN Connected to MySQL Server")
+        app.logger.error("ADMIN Connected to MySQL Server")
         # cursor.close()
         # connection.close()
         # print("MySQL connection is closed")
@@ -69,7 +72,7 @@ def index():
             result = db_operations.add_text(id, name, phone, blood, donation_date)
             print(request.form)
             if result[0] == 1:
-                app.logger.info(
+                app.logger.error(
                     'ADMIN ADDED USER: Blood Donated: id = {}, name = {}, blood type = {}, donation date = {}'.format(
                         id,
                         name,
@@ -77,16 +80,16 @@ def index():
                         blood,
                         donation_date))
             else:
-                app.logger.info(result[1])
+                app.logger.error(result[1])
             return render_template('index.html')
         else:
             amount = int(request.form["amount"])
             print(amount)
             result = db_operations.mci(amount)
             if result[0] == 1:
-                app.logger.info('Multiple Casualty Incident, donated {} amounts of O-'.format(amount))
+                app.logger.error('Multiple Casualty Incident, donated {} amounts of O-'.format(amount))
             else:
-                app.logger.info('ERROR: Not enough O- blood')
+                app.logger.error('ERROR: Not enough O- blood')
             return render_template('index.html')
     else:
         return render_template('index.html')
@@ -97,22 +100,23 @@ def requests():
     if request.method == "POST":
         blood = request.form.get("blood-group")
         request_date = request.form.get("Request Date")
-        amount = int(request.form.get("amount"))
+        amount = request.form.get("amount")
+        if amount is not None:
+            amount = int(amount)
+        else:
+            amount = 0
         result = db_operations.get_data(blood, amount, request_date)
         temp = db_operations.showTable()
         if result[0] == 1:
-            app_logger.info(
+            app_logger.error(
                 'ADMIN REQUESTED BLOOD: blood type = {}, amount = {}'.format(blood, amount))
         else:
-            app_logger.info('ERROR: Not enough blood type {}'.format(blood))
-        blood_logger.info(temp)
-
+            app_logger.error('ERROR: Not enough blood type {}'.format(blood))
+            blood_logger.error(temp)
         return render_template('requests.html', output_data=temp.items())
-        # return render_template('requests.html', data=dat)
     else:
         temp = db_operations.showTable()
         blood_logger.info(temp)
-        # print(temp)
         return render_template('requests.html', output_data=temp.items())
 
 
@@ -124,3 +128,5 @@ if os.path.exists('audit.log'):
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+# Check if the export button was pressed

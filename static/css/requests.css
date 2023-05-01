@@ -199,3 +199,29 @@ thead th {
     background-color: #55608f;
 }
 
+
+#export_button {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 10px 20px; /* Some padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make it an inline element */
+    font-size: 16px; /* Set font size */
+    cursor: pointer; /* Add a cursor on hover */
+    border-radius: 5px; /* Add rounded corners */
+    margin-left: 400px;
+
+
+}
+
+#export_button:hover {
+    background-color: #3e8e41; /* Dark green background on hover */
+}
+
+.flash-message.hide {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+

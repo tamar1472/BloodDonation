@@ -19,3 +19,134 @@
 2023-04-28 11:59:58,597  : ADMIN Connected to MySQL Server
 2023-04-28 12:02:52,868  : ADMIN Connected to MySQL Server
 2023-04-28 12:03:27,834  : ADMIN ADDED USER: Blood Donated: id = 657567567, name = fghfgh, blood type = 5447567, donation date = A-
+2023-05-01 11:08:24,421  : ADMIN Connected to MySQL Server
+2023-05-01 11:11:05,633  : ADMIN Connected to MySQL Server
+2023-05-01 11:53:02,593  : ADMIN Connected to MySQL Server
+2023-05-01 15:06:20,353  : ADMIN ADDED USER: Blood Donated: id = 467567, name = gjghj, blood type = 657567, donation date = O-
+2023-05-01 15:07:43,442  : ADMIN Connected to MySQL Server
+2023-05-01 15:08:03,668  : ADMIN Connected to MySQL Server
+2023-05-01 15:08:25,165  : ADMIN Connected to MySQL Server
+2023-05-01 15:08:46,165  : ADMIN Connected to MySQL Server
+2023-05-01 15:08:49,771  : ADMIN Connected to MySQL Server
+2023-05-01 15:09:06,830  : ADMIN Connected to MySQL Server
+2023-05-01 15:09:40,134  : ADMIN Connected to MySQL Server
+2023-05-01 15:14:34,863  : ADMIN Connected to MySQL Server
+2023-05-01 15:15:18,040  : ADMIN REQUESTED BLOOD: blood type = AB-, amount = 1
+2023-05-01 15:16:58,867  : ADMIN Connected to MySQL Server
+2023-05-01 15:17:03,865  : Exception on /requests [POST]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 100, in requests
+    amount = int(request.form.get("amount"))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+2023-05-01 15:19:19,782  : ADMIN Connected to MySQL Server
+2023-05-01 15:19:27,269  : ADMIN REQUESTED BLOOD: blood type = None, amount = 0
+2023-05-01 15:24:19,073  : ADMIN REQUESTED BLOOD: blood type = None, amount = 0
+2023-05-01 15:24:35,035  : ADMIN Connected to MySQL Server
+2023-05-01 15:24:37,789  : ADMIN REQUESTED BLOOD: blood type = None, amount = 0
+2023-05-01 15:24:49,769  : ADMIN REQUESTED BLOOD: blood type = None, amount = 0
+2023-05-01 15:26:10,950  : ADMIN Connected to MySQL Server
+2023-05-01 15:26:45,911  : ADMIN Connected to MySQL Server
+2023-05-01 15:33:52,660  : ADMIN Connected to MySQL Server
+2023-05-01 15:34:09,628  : ADMIN Connected to MySQL Server
+2023-05-01 15:34:23,989  : ADMIN REQUESTED BLOOD: blood type = AB-, amount = 1
+2023-05-01 15:34:36,009  : ADMIN Connected to MySQL Server
+2023-05-01 15:34:50,310  : ADMIN Connected to MySQL Server
+2023-05-01 15:35:54,010  : ADMIN Connected to MySQL Server
+2023-05-01 15:35:57,265  : ADMIN REQUESTED BLOOD: blood type = None, amount = 0
+2023-05-01 15:37:08,623  : ADMIN Connected to MySQL Server
+2023-05-01 15:37:14,582  : ADMIN REQUESTED BLOOD: blood type = None, amount = 0
+2023-05-01 15:40:35,867  : ADMIN Connected to MySQL Server
+2023-05-01 16:13:34,756  : ADMIN Connected to MySQL Server
+2023-05-01 16:14:31,381  : ADMIN Connected to MySQL Server
+2023-05-01 17:18:06,673  : ADMIN Connected to MySQL Server
+2023-05-01 17:18:52,814  : ADMIN Connected to MySQL Server
+2023-05-01 17:21:32,329  : ADMIN Connected to MySQL Server
+2023-05-01 17:30:35,676  : ADMIN Connected to MySQL Server
+2023-05-01 17:32:33,968  : ADMIN Connected to MySQL Server
+2023-05-01 17:33:22,301  : ADMIN Connected to MySQL Server
+2023-05-01 17:33:47,110  : ADMIN Connected to MySQL Server
+2023-05-01 17:36:35,947  : ADMIN Connected to MySQL Server
+2023-05-01 17:37:01,593  : ADMIN Connected to MySQL Server
+2023-05-01 17:39:10,422  : ADMIN Connected to MySQL Server
+2023-05-01 17:39:28,972  : ADMIN Connected to MySQL Server
+2023-05-01 17:39:40,307  : ADMIN Connected to MySQL Server
+2023-05-01 17:45:17,978  : ADMIN Connected to MySQL Server
+2023-05-01 17:45:54,612  : ADMIN Connected to MySQL Server
+2023-05-01 17:46:33,850  : ADMIN REQUESTED BLOOD: blood type = A+, amount = 1
+2023-05-01 17:46:54,319  : ADMIN ADDED USER: Blood Donated: id = 567657, name = gfhfgh, blood type = 45767, donation date = A-
+2023-05-01 17:54:38,986  : ADMIN Connected to MySQL Server
+2023-05-01 17:55:24,038  : ADMIN Connected to MySQL Server
+2023-05-01 17:55:31,065  : Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 88, in index
+    result = db_operations.mci(amount)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\db_operations.py", line 102, in mci
+    flask.flash("Moved {} rows with blood type O-".format(min(len(rows), amount)), 'success', timeout=5)
+TypeError: flash() got an unexpected keyword argument 'timeout'
+2023-05-01 17:55:33,969  : Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 88, in index
+    result = db_operations.mci(amount)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\db_operations.py", line 102, in mci
+    flask.flash("Moved {} rows with blood type O-".format(min(len(rows), amount)), 'success', timeout=5)
+TypeError: flash() got an unexpected keyword argument 'timeout'
+2023-05-01 17:57:15,247  : ADMIN Connected to MySQL Server
+2023-05-01 17:57:19,313  : Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 88, in index
+    result = db_operations.mci(amount)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\db_operations.py", line 102, in mci
+    flask.flash("Moved {} rows with blood type O-".format(min(len(rows), amount)), 'success', timeout=5)
+TypeError: flash() got an unexpected keyword argument 'timeout'
+2023-05-01 17:57:35,046  : ADMIN Connected to MySQL Server
+2023-05-01 17:57:37,371  : ERROR: Not enough O- blood
+2023-05-01 17:58:40,633  : ERROR: Not enough O- blood
+2023-05-01 17:59:20,762  : ADMIN Connected to MySQL Server
+2023-05-01 17:59:24,665  : ERROR: Not enough O- blood
+2023-05-01 17:59:41,949  : ADMIN Connected to MySQL Server
+2023-05-01 18:00:48,497  : ADMIN Connected to MySQL Server
+2023-05-01 18:01:10,703  : ADMIN Connected to MySQL Server
+2023-05-01 18:01:24,255  : ADMIN Connected to MySQL Server
+2023-05-01 18:01:29,380  : ERROR: Not enough O- blood
+2023-05-01 18:02:06,914  : ADMIN ADDED USER: Blood Donated: id = 67567, name = ghjghj, blood type = 567657, donation date = O-
+2023-05-01 18:02:47,957  : ADMIN REQUESTED BLOOD: blood type = A+, amount = 1
+2023-05-01 18:03:36,778  : ADMIN Connected to MySQL Server
+2023-05-01 18:03:53,174  : ADMIN REQUESTED BLOOD: blood type = A-, amount = 1
+2023-05-01 18:04:46,412  : ERROR: Not enough blood type A+
+2023-05-01 18:05:00,541  : ADMIN Connected to MySQL Server
+2023-05-01 18:15:36,542  : ADMIN Connected to MySQL Server
+2023-05-01 18:15:50,177  : ERROR: Not enough blood type A+
+2023-05-01 18:16:12,965  : ADMIN Connected to MySQL Server
+2023-05-01 18:16:14,635  : ERROR: Not enough blood type A+
