@@ -1,152 +1,23 @@
-
-2023-04-28 11:43:44,353  : ADMIN Connected to MySQL Server
-2023-04-28 11:44:12,594  : ADMIN ADDED USER: Blood Donated: id = 56546, name = fghfgh, blood type = 546456, donation date = AB-
-2023-04-28 11:44:32,960  : ERROR: Not enough blood type A+
-2023-04-28 11:44:43,789  : ADMIN REQUESTED BLOOD: blood type = AB+, amount = 1
-2023-04-28 11:45:11,188  : ADMIN Connected to MySQL Server
-2023-04-28 11:45:38,935  : ADMIN ADDED USER: Blood Donated: id = 675677, name = hjhjhjg, blood type = 456456, donation date = A+
-2023-04-28 11:45:50,289  : ADMIN ADDED USER: Blood Donated: id = 46456456, name = hjghj, blood type = 67567, donation date = A-
-2023-04-28 11:45:59,234  : ERROR: Not enough O- blood
-2023-04-28 11:46:27,531  : ADMIN REQUESTED BLOOD: blood type = AB+, amount = 2
-2023-04-28 11:47:06,638  : ADMIN Connected to MySQL Server
-2023-04-28 11:47:31,435  : ADMIN ADDED USER: Blood Donated: id = 56456456, name = hgfhfgh, blood type = 456456, donation date = A+
-2023-04-28 11:53:39,313  : ADMIN Connected to MySQL Server
-2023-04-28 11:54:16,989  : ADMIN Connected to MySQL Server
-2023-04-28 11:55:45,164  : ADMIN Connected to MySQL Server
-2023-04-28 11:55:45,164  : The program has finished running.
-2023-04-28 11:55:57,719  : ADMIN Connected to MySQL Server
-2023-04-28 11:55:57,720  : The program has finished running.
-2023-04-28 11:59:58,597  : ADMIN Connected to MySQL Server
-2023-04-28 12:02:52,868  : ADMIN Connected to MySQL Server
-2023-04-28 12:03:27,834  : ADMIN ADDED USER: Blood Donated: id = 657567567, name = fghfgh, blood type = 5447567, donation date = A-
-2023-05-01 11:08:24,421  : ADMIN Connected to MySQL Server
-2023-05-01 11:11:05,633  : ADMIN Connected to MySQL Server
-2023-05-01 11:53:02,593  : ADMIN Connected to MySQL Server
-2023-05-01 15:06:20,353  : ADMIN ADDED USER: Blood Donated: id = 467567, name = gjghj, blood type = 657567, donation date = O-
-2023-05-01 15:07:43,442  : ADMIN Connected to MySQL Server
-2023-05-01 15:08:03,668  : ADMIN Connected to MySQL Server
-2023-05-01 15:08:25,165  : ADMIN Connected to MySQL Server
-2023-05-01 15:08:46,165  : ADMIN Connected to MySQL Server
-2023-05-01 15:08:49,771  : ADMIN Connected to MySQL Server
-2023-05-01 15:09:06,830  : ADMIN Connected to MySQL Server
-2023-05-01 15:09:40,134  : ADMIN Connected to MySQL Server
-2023-05-01 15:14:34,863  : ADMIN Connected to MySQL Server
-2023-05-01 15:15:18,040  : ADMIN REQUESTED BLOOD: blood type = AB-, amount = 1
-2023-05-01 15:16:58,867  : ADMIN Connected to MySQL Server
-2023-05-01 15:17:03,865  : Exception on /requests [POST]
-Traceback (most recent call last):
-  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 100, in requests
-    amount = int(request.form.get("amount"))
-TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
-2023-05-01 15:19:19,782  : ADMIN Connected to MySQL Server
-2023-05-01 15:19:27,269  : ADMIN REQUESTED BLOOD: blood type = None, amount = 0
-2023-05-01 15:24:19,073  : ADMIN REQUESTED BLOOD: blood type = None, amount = 0
-2023-05-01 15:24:35,035  : ADMIN Connected to MySQL Server
-2023-05-01 15:24:37,789  : ADMIN REQUESTED BLOOD: blood type = None, amount = 0
-2023-05-01 15:24:49,769  : ADMIN REQUESTED BLOOD: blood type = None, amount = 0
-2023-05-01 15:26:10,950  : ADMIN Connected to MySQL Server
-2023-05-01 15:26:45,911  : ADMIN Connected to MySQL Server
-2023-05-01 15:33:52,660  : ADMIN Connected to MySQL Server
-2023-05-01 15:34:09,628  : ADMIN Connected to MySQL Server
-2023-05-01 15:34:23,989  : ADMIN REQUESTED BLOOD: blood type = AB-, amount = 1
-2023-05-01 15:34:36,009  : ADMIN Connected to MySQL Server
-2023-05-01 15:34:50,310  : ADMIN Connected to MySQL Server
-2023-05-01 15:35:54,010  : ADMIN Connected to MySQL Server
-2023-05-01 15:35:57,265  : ADMIN REQUESTED BLOOD: blood type = None, amount = 0
-2023-05-01 15:37:08,623  : ADMIN Connected to MySQL Server
-2023-05-01 15:37:14,582  : ADMIN REQUESTED BLOOD: blood type = None, amount = 0
-2023-05-01 15:40:35,867  : ADMIN Connected to MySQL Server
-2023-05-01 16:13:34,756  : ADMIN Connected to MySQL Server
-2023-05-01 16:14:31,381  : ADMIN Connected to MySQL Server
-2023-05-01 17:18:06,673  : ADMIN Connected to MySQL Server
-2023-05-01 17:18:52,814  : ADMIN Connected to MySQL Server
-2023-05-01 17:21:32,329  : ADMIN Connected to MySQL Server
-2023-05-01 17:30:35,676  : ADMIN Connected to MySQL Server
-2023-05-01 17:32:33,968  : ADMIN Connected to MySQL Server
-2023-05-01 17:33:22,301  : ADMIN Connected to MySQL Server
-2023-05-01 17:33:47,110  : ADMIN Connected to MySQL Server
-2023-05-01 17:36:35,947  : ADMIN Connected to MySQL Server
-2023-05-01 17:37:01,593  : ADMIN Connected to MySQL Server
-2023-05-01 17:39:10,422  : ADMIN Connected to MySQL Server
-2023-05-01 17:39:28,972  : ADMIN Connected to MySQL Server
-2023-05-01 17:39:40,307  : ADMIN Connected to MySQL Server
-2023-05-01 17:45:17,978  : ADMIN Connected to MySQL Server
-2023-05-01 17:45:54,612  : ADMIN Connected to MySQL Server
-2023-05-01 17:46:33,850  : ADMIN REQUESTED BLOOD: blood type = A+, amount = 1
-2023-05-01 17:46:54,319  : ADMIN ADDED USER: Blood Donated: id = 567657, name = gfhfgh, blood type = 45767, donation date = A-
-2023-05-01 17:54:38,986  : ADMIN Connected to MySQL Server
-2023-05-01 17:55:24,038  : ADMIN Connected to MySQL Server
-2023-05-01 17:55:31,065  : Exception on / [POST]
-Traceback (most recent call last):
-  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 88, in index
-    result = db_operations.mci(amount)
-  File "C:\Users\ъош\PycharmProjects\BloodDonation\db_operations.py", line 102, in mci
-    flask.flash("Moved {} rows with blood type O-".format(min(len(rows), amount)), 'success', timeout=5)
-TypeError: flash() got an unexpected keyword argument 'timeout'
-2023-05-01 17:55:33,969  : Exception on / [POST]
-Traceback (most recent call last):
-  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 88, in index
-    result = db_operations.mci(amount)
-  File "C:\Users\ъош\PycharmProjects\BloodDonation\db_operations.py", line 102, in mci
-    flask.flash("Moved {} rows with blood type O-".format(min(len(rows), amount)), 'success', timeout=5)
-TypeError: flash() got an unexpected keyword argument 'timeout'
-2023-05-01 17:57:15,247  : ADMIN Connected to MySQL Server
-2023-05-01 17:57:19,313  : Exception on / [POST]
-Traceback (most recent call last):
-  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 88, in index
-    result = db_operations.mci(amount)
-  File "C:\Users\ъош\PycharmProjects\BloodDonation\db_operations.py", line 102, in mci
-    flask.flash("Moved {} rows with blood type O-".format(min(len(rows), amount)), 'success', timeout=5)
-TypeError: flash() got an unexpected keyword argument 'timeout'
-2023-05-01 17:57:35,046  : ADMIN Connected to MySQL Server
-2023-05-01 17:57:37,371  : ERROR: Not enough O- blood
-2023-05-01 17:58:40,633  : ERROR: Not enough O- blood
-2023-05-01 17:59:20,762  : ADMIN Connected to MySQL Server
-2023-05-01 17:59:24,665  : ERROR: Not enough O- blood
-2023-05-01 17:59:41,949  : ADMIN Connected to MySQL Server
-2023-05-01 18:00:48,497  : ADMIN Connected to MySQL Server
-2023-05-01 18:01:10,703  : ADMIN Connected to MySQL Server
-2023-05-01 18:01:24,255  : ADMIN Connected to MySQL Server
-2023-05-01 18:01:29,380  : ERROR: Not enough O- blood
-2023-05-01 18:02:06,914  : ADMIN ADDED USER: Blood Donated: id = 67567, name = ghjghj, blood type = 567657, donation date = O-
-2023-05-01 18:02:47,957  : ADMIN REQUESTED BLOOD: blood type = A+, amount = 1
-2023-05-01 18:03:36,778  : ADMIN Connected to MySQL Server
-2023-05-01 18:03:53,174  : ADMIN REQUESTED BLOOD: blood type = A-, amount = 1
-2023-05-01 18:04:46,412  : ERROR: Not enough blood type A+
-2023-05-01 18:05:00,541  : ADMIN Connected to MySQL Server
-2023-05-01 18:15:36,542  : ADMIN Connected to MySQL Server
-2023-05-01 18:15:50,177  : ERROR: Not enough blood type A+
-2023-05-01 18:16:12,965  : ADMIN Connected to MySQL Server
-2023-05-01 18:16:14,635  : ERROR: Not enough blood type A+
+2023-05-04 14:07:00,336  : ADMIN Connected to MySQL Server
+2023-05-04 14:07:12,472  : ADMIN ADDED USER: Blood Donated: id = 456456, name = dfhfgh, blood type = 56456, donation date = A+
+2023-05-04 14:07:39,136  : ADMIN REQUESTED BLOOD: blood type = A-, amount = 1
+2023-05-04 14:07:47,617  : Multiple Casualty Incident, donated 1 amounts of O-
+2023-05-04 14:29:01,787  : ADMIN Connected to MySQL Server
+2023-05-04 14:29:20,556  : ADMIN ADDED USER: Blood Donated: id = 457457, name = dfhfgh, blood type = 567, donation date = O-
+2023-05-04 14:29:30,540  : ADMIN REQUESTED BLOOD: blood type = B+, amount = 1
+2023-05-04 15:51:42,951  : ADMIN Connected to MySQL Server
+2023-05-08 17:14:29,841  : ADMIN Connected to MySQL Server
+2023-05-08 17:14:56,643  : ADMIN ADDED USER: Blood Donated: id = 45457, name = fgjhfgj, blood type = 4576457, donation date = A-
+2023-05-08 17:15:01,123  : ERROR: Not enough O- blood
+2023-05-08 17:15:12,805  : ADMIN REQUESTED BLOOD: blood type = A+, amount = 12023-05-08 17:33:23,506  : ADMIN Connected to MySQL Server
+2023-05-08 17:33:38,819  : ADMIN ADDED USER: Blood Donated: id = 67567, name = dfgg, blood type = 6567, donation date = B+
+2023-05-08 17:33:43,479  : Multiple Casualty Incident, donated 1 amounts of O-
+2023-05-08 17:33:49,170  : ERROR: Not enough O- blood
+2023-05-08 17:34:11,002  : ADMIN REQUESTED BLOOD: blood type = B+, amount = 1
+2023-05-08 17:42:33,291  : ADMIN Connected to MySQL Server
+2023-05-08 17:42:50,794  : ADMIN REQUESTED BLOOD: blood type = AB+, amount = 1
+2023-05-08 17:42:58,147  : ERROR: Not enough blood type AB+
+2023-05-08 17:43:11,187  : ERROR:1062 (23000): Duplicate entry '456456-2023-05-15' for key 'donors.PRIMARY'
+2023-05-08 17:43:21,635  : ADMIN ADDED USER: Blood Donated: id = 456456, name = fdghdzfg, blood type = 435345, donation date = B+
+2023-05-08 17:43:27,115  : ERROR: Not enough O- blood
+2023-05-09 10:26:09,701  : ADMIN Connected to MySQL Server

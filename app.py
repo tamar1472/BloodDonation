@@ -1,7 +1,4 @@
-import csv
-import io
 import os
-
 from flask import Flask, render_template, request, url_for, redirect, flash, make_response, Response
 import db_operations
 
@@ -25,14 +22,6 @@ app_formatter = logging.Formatter('%(asctime)s  : %(message)s')
 app_file_handler.setFormatter(app_formatter)
 app_logger.addHandler(app_file_handler)
 
-# Set up a logger for blood table logging
-blood_logger = logging.getLogger('blood_table')
-blood_logger.setLevel(logging.ERROR)
-blood_file_handler = logging.FileHandler('blood_table.log')
-blood_formatter = logging.Formatter('%(asctime)s : %(message)s')
-blood_file_handler.setFormatter(blood_formatter)
-blood_logger.addHandler(blood_file_handler)
-
 try:
     connection = mysql.connector.connect(user='tamar', password='123456', host='127.0.0.1', port=3306,
                                          database='blood_donation',
@@ -52,8 +41,8 @@ except Error as e:
     print("Error while connecting to MySQL", e)
 
 
-@app.route('/', methods=["POST", "GET"])
-def index():
+@app.route('/donors', methods=["POST", "GET"])
+def donors():
     print(request.method)
     if request.method == "POST":
         print(request.form["sub_type"])
@@ -81,7 +70,7 @@ def index():
                         donation_date))
             else:
                 app.logger.error(result[1])
-            return render_template('index.html')
+            return render_template('donors.html')
         else:
             amount = int(request.form["amount"])
             print(amount)
@@ -90,9 +79,9 @@ def index():
                 app.logger.error('Multiple Casualty Incident, donated {} amounts of O-'.format(amount))
             else:
                 app.logger.error('ERROR: Not enough O- blood')
-            return render_template('index.html')
+            return render_template('donors.html')
     else:
-        return render_template('index.html')
+        return render_template('donors.html')
 
 
 @app.route('/requests', methods=["POST", "GET"])
@@ -112,11 +101,9 @@ def requests():
                 'ADMIN REQUESTED BLOOD: blood type = {}, amount = {}'.format(blood, amount))
         else:
             app_logger.error('ERROR: Not enough blood type {}'.format(blood))
-            blood_logger.error(temp)
         return render_template('requests.html', output_data=temp.items())
     else:
         temp = db_operations.showTable()
-        blood_logger.info(temp)
         return render_template('requests.html', output_data=temp.items())
 
 
@@ -128,5 +115,3 @@ if os.path.exists('audit.log'):
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-# Check if the export button was pressed
