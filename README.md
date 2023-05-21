@@ -10,6 +10,9 @@ The regular user can only accses the donation and requests forms.
 and the research student can accses only the RS panel. 
 I have used HTML and CSS to this extent for the very first time. 
 
+![Simple Login page for now](ScreenShots\login.jpg)
+
+
 <img src="C:\Users\תמר\Pictures\bio_project\login.jpg" alt="Alt text" title="Simple Login page for now">
 
 <img src="C:\Users\תמר\Pictures\bio_project\admin_panel.jpg" alt="Alt text" title="Admin Panel">
