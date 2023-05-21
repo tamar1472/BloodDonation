@@ -21,3 +21,543 @@
 2023-05-08 17:43:21,635  : ADMIN ADDED USER: Blood Donated: id = 456456, name = fdghdzfg, blood type = 435345, donation date = B+
 2023-05-08 17:43:27,115  : ERROR: Not enough O- blood
 2023-05-09 10:26:09,701  : ADMIN Connected to MySQL Server
+2023-05-09 10:34:45,686  : ADMIN Connected to MySQL Server
+2023-05-09 10:35:22,348  : ADMIN Connected to MySQL Server
+2023-05-09 10:47:58,889  : ADMIN Connected to MySQL Server
+2023-05-09 10:54:40,765  : ADMIN Connected to MySQL Server
+2023-05-09 10:54:51,037  : Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 50, in login
+    if x['role'] == 'admin':
+TypeError: 'NoneType' object is not subscriptable
+2023-05-09 10:55:41,276  : ADMIN Connected to MySQL Server
+2023-05-09 10:55:45,343  : Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 50, in login
+    if x['role'] == 'admin':
+TypeError: 'NoneType' object is not subscriptable
+2023-05-09 10:57:33,686  : ADMIN Connected to MySQL Server
+2023-05-09 10:57:40,240  : Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 50, in login
+    if x['role'] == 'admin':
+TypeError: string indices must be integers
+2023-05-09 11:25:17,287  : ADMIN Connected to MySQL Server
+2023-05-09 11:26:21,703  : Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 50, in login
+    if x['role'] == 'admin':
+TypeError: 'int' object is not subscriptable
+2023-05-09 11:28:15,128  : ADMIN Connected to MySQL Server
+2023-05-09 11:28:36,668  : Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 50, in login
+    if x['role'] == 'admin':
+TypeError: tuple indices must be integers or slices, not str
+2023-05-09 11:29:43,926  : ADMIN Connected to MySQL Server
+2023-05-09 11:29:49,543  : Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 49, in login
+    x = db_operations.login(username, password)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\db_operations.py", line 119, in login
+    return rows[3]
+IndexError: list index out of range
+2023-05-09 11:30:06,460  : ADMIN Connected to MySQL Server
+2023-05-09 11:30:12,153  : Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 49, in login
+    x = db_operations.login(username, password)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\db_operations.py", line 119, in login
+    return rows[2]
+IndexError: list index out of range
+2023-05-09 11:34:53,411  : ADMIN Connected to MySQL Server
+2023-05-09 11:35:03,287  : Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 50, in login
+    if x['role'] == 'admin':
+TypeError: tuple indices must be integers or slices, not str
+2023-05-09 11:35:40,256  : ADMIN Connected to MySQL Server
+2023-05-09 11:35:59,106  : Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 57, in login
+    return redirect(url_for('home'))
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\helpers.py", line 256, in url_for
+    return current_app.url_for(
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'home'. Did you mean 'login' instead?
+2023-05-09 11:38:43,187  : ADMIN Connected to MySQL Server
+2023-05-09 11:38:47,157  : Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1845, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2137, in make_response
+    raise TypeError(
+TypeError: The view function for 'login' did not return a valid response. The function either returned None or ended without a return statement.
+2023-05-09 11:39:27,378  : ADMIN Connected to MySQL Server
+2023-05-09 11:41:10,703  : ADMIN Connected to MySQL Server
+2023-05-09 11:41:32,084  : ADMIN Connected to MySQL Server
+2023-05-09 11:42:29,340  : Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 49, in login
+    x = db_operations.login(username, password)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\db_operations.py", line 121, in login
+    role = result[0]
+IndexError: list index out of range
+2023-05-09 11:42:56,266  : ADMIN Connected to MySQL Server
+2023-05-09 11:43:41,062  : ADMIN Connected to MySQL Server
+2023-05-09 11:56:09,282  : ADMIN Connected to MySQL Server
+2023-05-09 11:57:12,519  : ADMIN Connected to MySQL Server
+2023-05-09 11:59:31,670  : ADMIN Connected to MySQL Server
+2023-05-09 12:00:46,362  : ADMIN Connected to MySQL Server
+2023-05-09 12:00:58,918  : ADMIN Connected to MySQL Server
+2023-05-09 12:11:31,408  : ADMIN Connected to MySQL Server
+2023-05-09 12:12:12,345  : ADMIN Connected to MySQL Server
+2023-05-09 12:13:06,324  : ADMIN Connected to MySQL Server
+2023-05-09 12:14:05,183  : ADMIN Connected to MySQL Server
+2023-05-09 12:16:34,783  : ADMIN Connected to MySQL Server
+2023-05-09 12:17:46,844  : ADMIN Connected to MySQL Server
+2023-05-09 12:19:23,723  : ADMIN Connected to MySQL Server
+2023-05-09 12:21:01,372  : ADMIN Connected to MySQL Server
+2023-05-09 12:22:53,865  : ADMIN Connected to MySQL Server
+2023-05-09 12:28:37,724  : ADMIN ADDED USER: Blood Donated: id = 567567, name = ghjghj, blood type = 567567, donation date = A-
+2023-05-09 12:33:20,699  : ADMIN Connected to MySQL Server
+2023-05-09 12:34:26,460  : ADMIN Connected to MySQL Server
+2023-05-09 12:35:49,021  : ADMIN Connected to MySQL Server
+2023-05-09 12:37:42,118  : ADMIN Connected to MySQL Server
+2023-05-09 12:39:43,614  : ADMIN Connected to MySQL Server
+2023-05-09 12:40:14,849  : ADMIN Connected to MySQL Server
+2023-05-09 12:43:15,153  : ADMIN Connected to MySQL Server
+2023-05-09 12:44:05,106  : ADMIN Connected to MySQL Server
+2023-05-09 12:44:58,208  : ADMIN Connected to MySQL Server
+2023-05-09 12:45:51,821  : ADMIN Connected to MySQL Server
+2023-05-09 12:46:26,407  : ADMIN Connected to MySQL Server
+2023-05-09 12:47:50,172  : ADMIN Connected to MySQL Server
+2023-05-09 12:49:35,220  : ADMIN Connected to MySQL Server
+2023-05-09 12:51:08,515  : ADMIN Connected to MySQL Server
+2023-05-09 12:54:39,364  : ADMIN Connected to MySQL Server
+2023-05-09 12:56:01,161  : ADMIN Connected to MySQL Server
+2023-05-09 12:58:08,704  : ADMIN Connected to MySQL Server
+2023-05-09 13:45:01,387  : ADMIN Connected to MySQL Server
+2023-05-09 13:45:06,113  : Exception on /admin [GET]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1845, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2137, in make_response
+    raise TypeError(
+TypeError: The view function for 'admin_panel' did not return a valid response. The function either returned None or ended without a return statement.
+2023-05-09 13:45:53,246  : ADMIN Connected to MySQL Server
+2023-05-09 13:45:54,912  : Exception on /admin [GET]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1845, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2137, in make_response
+    raise TypeError(
+TypeError: The view function for 'admin_panel' did not return a valid response. The function either returned None or ended without a return statement.
+2023-05-09 13:46:42,946  : Exception on /admin [GET]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1845, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2137, in make_response
+    raise TypeError(
+TypeError: The view function for 'admin_panel' did not return a valid response. The function either returned None or ended without a return statement.
+2023-05-09 13:49:09,165  : Exception on /admin [GET]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1845, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2137, in make_response
+    raise TypeError(
+TypeError: The view function for 'admin_panel' did not return a valid response. The function either returned None or ended without a return statement.
+2023-05-09 13:49:37,283  : ADMIN Connected to MySQL Server
+2023-05-09 13:49:41,644  : Exception on /admin [GET]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1845, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2137, in make_response
+    raise TypeError(
+TypeError: The view function for 'admin_panel' did not return a valid response. The function either returned None or ended without a return statement.
+2023-05-09 13:50:25,271  : ADMIN Connected to MySQL Server
+2023-05-09 13:50:27,017  : Exception on /admin [GET]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1845, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2137, in make_response
+    raise TypeError(
+TypeError: The view function for 'admin_panel' did not return a valid response. The function either returned None or ended without a return statement.
+2023-05-09 14:02:08,549  : Exception on /admin [GET]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1845, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2137, in make_response
+    raise TypeError(
+TypeError: The view function for 'admin_panel' did not return a valid response. The function either returned None or ended without a return statement.
+2023-05-09 14:07:14,175  : ADMIN Connected to MySQL Server
+2023-05-09 14:07:15,694  : Exception on /admin [GET]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 69, in admin_panel
+    return redirect(url_for('admin_panel.html'))
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\helpers.py", line 256, in url_for
+    return current_app.url_for(
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'admin_panel.html'. Did you mean 'admin_panel' instead?
+2023-05-09 14:08:10,263  : ADMIN Connected to MySQL Server
+2023-05-09 14:09:15,621  : ADMIN Connected to MySQL Server
+2023-05-09 14:09:41,625  : ADMIN Connected to MySQL Server
+2023-05-09 14:17:35,306  : ADMIN Connected to MySQL Server
+2023-05-09 14:20:41,255  : ADMIN Connected to MySQL Server
+2023-05-09 14:20:41,329  : Exception on /admin [GET]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1845, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2137, in make_response
+    raise TypeError(
+TypeError: The view function for 'admin_panel' did not return a valid response. The function either returned None or ended without a return statement.
+2023-05-09 14:20:45,000  : Exception on /admin [GET]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1845, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2137, in make_response
+    raise TypeError(
+TypeError: The view function for 'admin_panel' did not return a valid response. The function either returned None or ended without a return statement.
+2023-05-09 14:22:22,141  : ADMIN Connected to MySQL Server
+2023-05-09 14:22:25,164  : Exception on /admin [GET]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 70, in admin_panel
+    return render_template('admin_panel.html', output_data=temp.items())
+UnboundLocalError: local variable 'temp' referenced before assignment
+2023-05-09 14:23:12,423  : ADMIN Connected to MySQL Server
+2023-05-09 15:09:30,735  : ADMIN Connected to MySQL Server
+2023-05-09 15:12:23,368  : ADMIN Connected to MySQL Server
+2023-05-09 15:12:57,435  : ADMIN Connected to MySQL Server
+2023-05-09 15:13:25,769  : ADMIN Connected to MySQL Server
+2023-05-09 15:13:33,975  : ADMIN Connected to MySQL Server
+2023-05-09 15:13:53,359  : ADMIN Connected to MySQL Server
+2023-05-09 15:14:16,376  : ADMIN Connected to MySQL Server
+2023-05-09 15:16:39,844  : ADMIN Connected to MySQL Server
+2023-05-09 15:17:28,353  : ADMIN Connected to MySQL Server
+2023-05-09 15:18:07,053  : ADMIN Connected to MySQL Server
+2023-05-09 15:18:22,352  : ADMIN Connected to MySQL Server
+2023-05-09 15:18:33,141  : ADMIN Connected to MySQL Server
+2023-05-09 15:18:46,308  : ADMIN Connected to MySQL Server
+2023-05-09 15:22:26,574  : ADMIN Connected to MySQL Server
+2023-05-09 15:22:31,590  : Exception on /admin [GET]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 71, in admin_panel
+    return render_template('admin_panel.html', result=temp.items())
+AttributeError: 'list' object has no attribute 'items'
+2023-05-09 15:22:38,859  : ADMIN Connected to MySQL Server
+2023-05-09 15:22:39,121  : Exception on /admin [GET]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 71, in admin_panel
+    return render_template('admin_panel.html', output_data=temp.items())
+AttributeError: 'list' object has no attribute 'items'
+2023-05-09 15:22:39,810  : Exception on /admin [GET]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 71, in admin_panel
+    return render_template('admin_panel.html', output_data=temp.items())
+AttributeError: 'list' object has no attribute 'items'
+2023-05-09 15:22:41,374  : Exception on /admin [GET]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 71, in admin_panel
+    return render_template('admin_panel.html', output_data=temp.items())
+AttributeError: 'list' object has no attribute 'items'
+2023-05-09 15:23:07,661  : ADMIN Connected to MySQL Server
+2023-05-09 15:23:28,673  : ADMIN Connected to MySQL Server
+2023-05-09 15:24:02,538  : ADMIN Connected to MySQL Server
+2023-05-09 15:26:22,040  : ADMIN Connected to MySQL Server
+2023-05-09 15:35:19,233  : ADMIN Connected to MySQL Server
+2023-05-09 15:38:56,090  : ADMIN Connected to MySQL Server
+2023-05-09 15:39:36,279  : ADMIN Connected to MySQL Server
+2023-05-09 15:39:53,303  : ADMIN Connected to MySQL Server
+2023-05-09 15:40:08,269  : ADMIN Connected to MySQL Server
+2023-05-09 15:40:23,535  : ADMIN Connected to MySQL Server
+2023-05-09 15:40:45,744  : ADMIN Connected to MySQL Server
+2023-05-09 15:43:17,770  : ADMIN Connected to MySQL Server
+2023-05-09 15:50:55,424  : ADMIN Connected to MySQL Server
+2023-05-09 15:53:03,643  : ADMIN Connected to MySQL Server
+2023-05-09 15:53:28,194  : ADMIN Connected to MySQL Server
+2023-05-09 15:53:49,951  : ADMIN Connected to MySQL Server
+2023-05-09 15:55:06,216  : ADMIN Connected to MySQL Server
+2023-05-09 17:34:50,634  : ADMIN Connected to MySQL Server
+2023-05-09 17:35:59,084  : ADMIN Connected to MySQL Server
+2023-05-09 17:47:05,431  : ADMIN Connected to MySQL Server
+2023-05-09 17:47:20,030  : ADMIN Connected to MySQL Server
+2023-05-09 17:48:12,802  : ADMIN Connected to MySQL Server
+2023-05-09 17:51:52,090  : ADMIN Connected to MySQL Server
+2023-05-09 17:52:27,941  : ADMIN Connected to MySQL Server
+2023-05-09 17:53:41,032  : ADMIN Connected to MySQL Server
+2023-05-09 17:56:29,363  : ADMIN Connected to MySQL Server
+2023-05-09 17:57:14,515  : ADMIN Connected to MySQL Server
+2023-05-09 18:23:34,210  : ADMIN Connected to MySQL Server
+2023-05-09 18:24:15,966  : ADMIN Connected to MySQL Server
+2023-05-09 18:59:26,333  : ADMIN Connected to MySQL Server
+2023-05-09 18:59:29,991  : Exception on /admin [GET]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 68, in admin_panel
+    return redirect(url_for('/login'))
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\helpers.py", line 256, in url_for
+    return current_app.url_for(
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint '/login'. Did you mean 'login' instead?
+2023-05-09 18:59:49,652  : ADMIN Connected to MySQL Server
+2023-05-09 19:01:32,780  : ADMIN Connected to MySQL Server
+2023-05-09 19:04:03,719  : ADMIN Connected to MySQL Server
+2023-05-09 19:04:18,703  : ADMIN Connected to MySQL Server
+2023-05-09 19:04:28,593  : ADMIN Connected to MySQL Server
+2023-05-09 19:04:55,810  : ADMIN Connected to MySQL Server
+2023-05-09 19:08:19,840  : ADMIN Connected to MySQL Server
+2023-05-09 19:09:23,393  : ADMIN Connected to MySQL Server
+2023-05-09 19:09:27,834  : Exception on /admin [GET]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 74, in admin_panel
+    if session["role"] == 'admin':
+KeyError: 'role'
+2023-05-09 19:09:35,257  : Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 56, in login
+    result = db_operations.login(session["username"], session["password"])
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\db_operations.py", line 121, in login
+    role = result[0]
+IndexError: list index out of range
+2023-05-09 19:11:58,580  : ADMIN Connected to MySQL Server
+2023-05-09 19:12:24,215  : ADMIN Connected to MySQL Server
+2023-05-09 19:12:31,155  : Exception on /admin [GET]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 74, in admin_panel
+    if session["role"] == 'admin':
+KeyError: 'role'
+2023-05-09 19:16:37,574  : ADMIN Connected to MySQL Server
+2023-05-09 19:16:41,011  : Exception on /admin [GET]
+Traceback (most recent call last):
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ъош\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\ъош\PycharmProjects\BloodDonation\app.py", line 77, in admin_panel
+    if session["role"] != 'admin':
+KeyError: 'role'
+2023-05-09 19:20:34,768  : ADMIN Connected to MySQL Server
+2023-05-09 19:21:00,100  : ADMIN Connected to MySQL Server
+2023-05-20 17:00:29,452  : ADMIN Connected to MySQL Server
+2023-05-21 17:51:01,472  : ADMIN Connected to MySQL Server
+2023-05-21 17:53:00,133  : ADMIN Connected to MySQL Server
+2023-05-21 17:54:14,069  : ADMIN Connected to MySQL Server
+2023-05-21 18:38:54,767  : ADMIN Connected to MySQL Server

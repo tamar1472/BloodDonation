@@ -1,13 +1,16 @@
 import os
-from flask import Flask, render_template, request, url_for, redirect, flash, make_response, Response
+from flask import Flask, render_template, request, url_for, redirect, session
+from flask_session import Session
 import db_operations
-
 import logging
 import mysql.connector
 from mysql.connector import Error
 
 app = Flask(__name__)
 app.secret_key = 'mysecretkey'
+app.config["SESSION_PERMANENT"] = False
+app.config["SESSION_TYPE"] = "filesystem"
+Session(app)
 
 # Disable Werkzeug logs in the console
 werkzeug_logger = logging.getLogger('werkzeug')
@@ -39,6 +42,45 @@ try:
         # print("MySQL connection is closed")
 except Error as e:
     print("Error while connecting to MySQL", e)
+
+
+@app.route('/', methods=["POST", "GET"])
+def login():
+    if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
+        username = request.form['username']
+        password = request.form['password']
+        result = db_operations.login(username, password)
+        if result[0] == 'admin':
+            session["username"] = username
+            session["role"] = "admin"
+            return redirect(url_for('admin_panel'))
+
+        if result[0] == 'regular user':
+            session["username"] = username
+            session["role"] = "regular user"
+            return redirect(url_for('requests'))
+
+        if result[0] == 'research student':
+            session["username"] = username
+            session["role"] = "research student"
+            return redirect(url_for('donors'))
+    #     # Check the username and password against the database here
+    #     # If the login is successful, redirect the user to the home page
+    #     # If the login fails, render the login page with an error message
+
+    return render_template('login.html')
+
+
+@app.route('/admin', methods=["POST", "GET"])
+def admin_panel():
+    if session["role"] != 'admin':
+        return redirect(url_for('login'))
+    users = db_operations.showUsers()
+    donors = db_operations.showDonors()
+    if request.method == "POST":
+        pass
+
+    return render_template('admin_panel.html', users=users, donors=donors)
 
 
 @app.route('/donors', methods=["POST", "GET"])

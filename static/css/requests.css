@@ -28,7 +28,6 @@ nav {
     overflow: hidden;
 }
 
-
 nav a {
     font-size: 25px;
     display: inline;
@@ -42,6 +41,14 @@ nav a {
 nav a:hover {
     background-color: #c00000;
     color: #fff;
+}
+
+.logout-link {
+    font-size: 25px;
+    padding: 100px;
+    float: right;
+    margin-right: 20px;
+    text-decoration: none;
 }
 
 /* Main Content Styles */
@@ -224,4 +231,9 @@ thead th {
     opacity: 0;
     transition: opacity 0.5s ease-out;
 }
+
+
+
+
+
 

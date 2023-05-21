@@ -109,3 +109,26 @@ def showTable():
         cursor.execute("SELECT COUNT(*) FROM donors WHERE eligibility_status = 'Eligible' and blood_type = %s", (t,))
         blood_type[t] = cursor.fetchall()[0][0]
     return blood_type
+
+
+def login(username, password):
+    fetch = 'SELECT role FROM users WHERE username = %s AND password = %s'
+    cursor.execute(fetch, (username, password,))
+    result = cursor.fetchall()
+    if result is None:
+        return "Invalid credentials"
+    else:
+        role = result[0]
+    return role
+
+
+def showUsers():
+    cursor.execute("SELECT username, role FROM users")
+    users = cursor.fetchall()
+    return users
+
+
+def showDonors():
+    cursor.execute("SELECT * FROM donors WHERE eligibility_status = 'Eligible' ")
+    donors = cursor.fetchall()
+    return donors

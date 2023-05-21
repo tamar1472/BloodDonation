@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %} - Schedule Blood Transfer </title>
+    <link rel="icon" type="image/x-icon" href="/static/Images/3595788.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_panel.css') }}">
+
+</head>
+
+<body>
+<!-- navigate through pages -->
+<nav>
+    <a href="{{ url_for('admin_panel') }}">Admin Panel</a>
+    <a href="{{ url_for('donors') }}">Donations</a>
+    <a href="{{ url_for('requests') }}">Requests</a>
+    <a href="{{ url_for('login') }}">Log Out</a>
+</nav>
+<hr class="hr2">
+
+<div class="content">
+    {% block content %} {% endblock %}
+</div>
+
+<h1>Admin Panel</h1>
+
+
+<div class="table-container">
+    <table class="users_table">
+        <caption>Users</caption>
+        <thead>
+        <tr>
+            <th>User name</th>
+            <th>Role</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for row in users %}
+            <tr class="active-row">
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <table class="donors_table">
+        <caption>Eligible donors</caption>
+        <thead>
+        <tr>
+            <th>Donor name</th>
+            <th>Donor phone number</th>
+            <th>Blood type</th>
+            <th>Last donation date</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for row in donors %}
+            <tr class="active-row">
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+</body>
+</html>

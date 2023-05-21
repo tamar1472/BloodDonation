@@ -1,0 +1,202 @@
+/* Global Styles */
+body {
+    background-image: url("/static/Images/background.jpg");
+    height: 1000px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+hr.hr1 {
+    border-top: 1px dashed red;
+}
+
+h1 {
+    font-family: Serif;
+    font-size: 30px;
+    color: red;
+    text-align: center;
+}
+
+
+/* Navigation Styles */
+nav {
+    overflow: hidden;
+}
+
+
+nav a {
+    font-size: 25px;
+    display: inline;
+    color: #333;
+    text-align: left;
+    padding: 100px;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #c00000;
+    color: #fff;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* CTA Button Styles */
+.cta-button {
+    display: inline-block;
+    background-color: #c00000;
+    color: #fff;
+    padding: 100000px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #a00000;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+
+.text {
+    font-size: 30px;
+    color: #000000;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.flash-message.hide {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+
+/* Styles for the Users table */
+.users_table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.users_table caption {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.users_table th, .users_table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.users_table th {
+    background-color: #f2f2f2;
+}
+
+.users_table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+
+/* Styles for the Donors table */
+.donors_table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.donors_table caption {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.donors_table th, .donors_table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.donors_table th {
+    background-color: #f2f2f2;
+}
+
+.donors_table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.table-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.users_table {
+    width: 20%;
+    height: 60%;
+}
+
+.donors_table {
+    width: 40%;
+}
+

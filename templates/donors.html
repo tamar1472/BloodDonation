@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %} {% endblock %} - Blood Donations</title>
-    <link rel="icon" type="image/x-icon" href="/static/3595788.png">
+    <link rel="icon" type="image/x-icon" href="/static/Images/3595788.png">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
 
 <body>
 <!-- navigate through pages -->
 <nav>
+    <a href="{{ url_for('admin_panel') }}">Admin Panel</a>
     <a href="{{ url_for('donors') }}">Home</a>
     <a href="{{ url_for('requests') }}">Requests</a>
+    <a href="{{ url_for('login') }}">Log Out</a>
 </nav>
 <hr class="hr1">
 
