@@ -1,7 +1,7 @@
 # BloodDonation
 blood donation website with flask and MySQL
 
-This project was a ppart of a course for Introduction to biomedical software, in this project i make a flask website and a MySQL database. 
+This project was a part of a course for Introduction to biomedical software, in this project i make a flask website and a MySQL database. 
 for now the project isn't online.
 In this application you can donate a specific type of blood to the clinic, you can request a specific blood type and the amount, and there is a Multiple casulty incident where you can ask for an amount of blood O-.
 There is a login form for Admin, Refular user and research student. 
