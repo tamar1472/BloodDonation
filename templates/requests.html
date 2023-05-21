@@ -10,11 +10,23 @@
 <body>
 <!-- navigate through pages -->
 <nav>
-    
-    <a href="{{ url_for('donors') }}">Home</a>
-    <a href="{{ url_for('requests') }}">Requests</a>
-    <a href="{{ url_for('login') }}">Log Out</a>
+    {% if 'role' in session and session['role'] == 'admin' %}
+        <a href="/admin">Admin Panel</a>
+        <a href="/donors">Donation</a>
+        <a href="/requests">Requests</a>
+    {% endif %}
+    {% if 'role' in session and session['role'] == 'regular user' %}
+        <a href="/donors">Donation</a>
+        <a href="/requests">Requests</a>
+    {% endif %}
+    {% if 'role' in session and session['role'] == 'research student' %}
+        <a href="/RS_panel">Research Student Panel</a>
+    {% endif %}
+    {% if 'username' in session %}
+        <a href="/">Logout</a>
+    {% endif %}
 </nav>
+
 <hr class="hr2">
 
 <div class="content">
@@ -85,28 +97,28 @@
 
 <img src="/static/Images/compatible-blood-donors.jpg" alt="x">
 
-
-<table class="styled_table">
-    <caption>Available Blood types</caption>
-    <thead>
-    <tr>
-        <th>Blood Type</th>
-        <th>Amount</th>
-    </tr>
-    </thead>
-    <tbody>
-    {% for row in output_data %}
-        <tr class="active-row">
-            <td>{{ row[0] }}</td>
-            <td>{{ row[1] }}</td>
+{% if 'role' in session and session['role'] in ['admin'] %}
+    <table class="styled_table">
+        <caption>Available Blood types</caption>
+        <thead>
+        <tr>
+            <th>Blood Type</th>
+            <th>Amount</th>
         </tr>
-    {% endfor %}
-    </tbody>
-    <button id="export_button" type="button" onclick="tableToCSV()">
-        Export
-    </button>
-</table>
-
+        </thead>
+        <tbody>
+        {% for row in output_data %}
+            <tr class="active-row">
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+        <button id="export_button" type="button" onclick="tableToCSV()">
+            Export
+        </button>
+    </table>
+{% endif %}
 <script type="text/javascript">
     function tableToCSV() {
         // Variable to store the final csv data

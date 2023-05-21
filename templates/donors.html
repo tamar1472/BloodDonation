@@ -10,10 +10,21 @@
 <body>
 <!-- navigate through pages -->
 <nav>
-    <a href="{{ url_for('admin_panel') }}">Admin Panel</a>
-    <a href="{{ url_for('donors') }}">Home</a>
-    <a href="{{ url_for('requests') }}">Requests</a>
-    <a href="{{ url_for('login') }}">Log Out</a>
+    {% if 'role' in session and session['role'] == 'admin' %}
+        <a href="/admin">Admin Panel</a>
+        <a href="/donors">Donation</a>
+        <a href="/requests">Requests</a>
+    {% endif %}
+    {% if 'role' in session and session['role'] == 'regular user' %}
+        <a href="/donors">Donation</a>
+        <a href="/requests">Requests</a>
+    {% endif %}
+    {% if 'role' in session and session['role'] == 'research student' %}
+        <a href="/RS_panel">Research Student Panel</a>
+    {% endif %}
+    {% if 'username' in session %}
+        <a href="/">Logout</a>
+    {% endif %}
 </nav>
 <hr class="hr1">
 

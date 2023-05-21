@@ -2,14 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %} {% endblock %} - Schedule Blood Transfer </title>
-    <link rel="icon" type="image/x-icon" href="/static/Images/3595788.png">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_panel.css') }}">
-
+    <title>Reaserch Student Panel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/RS_panel.css') }}">
 </head>
-
 <body>
-<!-- navigate through pages -->
 <nav>
     {% if 'role' in session and session['role'] == 'admin' %}
         <a href="/admin">Admin Panel</a>
@@ -27,26 +23,19 @@
         <a href="/">Logout</a>
     {% endif %}
 </nav>
-<hr class="hr2">
-
-<div class="content">
-    {% block content %} {% endblock %}
-</div>
-
-<h1>Admin Panel</h1>
 
 
 <div class="table-container">
-    <table class="users_table">
-        <caption>Users</caption>
+    <table class="blood_table">
+        <caption>Available Blood types</caption>
         <thead>
         <tr>
-            <th>User name</th>
-            <th>Role</th>
+            <th>Blood Type</th>
+            <th>Amount</th>
         </tr>
         </thead>
         <tbody>
-        {% for row in users %}
+        {% for row in blood %}
             <tr class="active-row">
                 <td>{{ row[0] }}</td>
                 <td>{{ row[1] }}</td>
@@ -58,8 +47,6 @@
         <caption>Eligible donors</caption>
         <thead>
         <tr>
-            <th>Donor name</th>
-            <th>Donor phone number</th>
             <th>Blood type</th>
             <th>Last donation date</th>
         </tr>
@@ -67,16 +54,13 @@
         <tbody>
         {% for row in donors %}
             <tr class="active-row">
-                <td>{{ row[1] }}</td>
-                <td>{{ row[2] }}</td>
                 <td>{{ row[3] }}</td>
                 <td>{{ row[4] }}</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
+
 </div>
-
-
 </body>
 </html>

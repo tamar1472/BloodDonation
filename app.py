@@ -36,7 +36,7 @@ try:
         cursor.execute("select database();")
         record = cursor.fetchone()
         print("You're connected to database: ", record)
-        app.logger.error("ADMIN Connected to MySQL Server")
+        app.logger.error("Connected to MySQL Server")
         # cursor.close()
         # connection.close()
         # print("MySQL connection is closed")
@@ -53,21 +53,20 @@ def login():
         if result[0] == 'admin':
             session["username"] = username
             session["role"] = "admin"
+            app.logger.error("ADMIN Connected")
             return redirect(url_for('admin_panel'))
 
         if result[0] == 'regular user':
             session["username"] = username
             session["role"] = "regular user"
-            return redirect(url_for('requests'))
+            app.logger.error("REGULAR USER Connected")
+            return redirect(url_for('donors'))
 
         if result[0] == 'research student':
             session["username"] = username
             session["role"] = "research student"
-            return redirect(url_for('donors'))
-    #     # Check the username and password against the database here
-    #     # If the login is successful, redirect the user to the home page
-    #     # If the login fails, render the login page with an error message
-
+            app.logger.error("RESEARCH STUDENT Connected")
+            return redirect(url_for('RS_panel'))
     return render_template('login.html')
 
 
@@ -81,6 +80,15 @@ def admin_panel():
         pass
 
     return render_template('admin_panel.html', users=users, donors=donors)
+
+
+@app.route('/RS_panel', methods=["POST", "GET"])
+def RS_panel():
+    if session["role"] != 'research student':
+        return redirect(url_for('login'))
+    donors = db_operations.showDonors()
+    blood = db_operations.showTable()
+    return render_template('RS_panel.html', donors=donors, blood=blood)
 
 
 @app.route('/donors', methods=["POST", "GET"])
@@ -103,13 +111,22 @@ def donors():
             result = db_operations.add_text(id, name, phone, blood, donation_date)
             print(request.form)
             if result[0] == 1:
-                app.logger.error(
-                    'ADMIN ADDED USER: Blood Donated: id = {}, name = {}, blood type = {}, donation date = {}'.format(
-                        id,
-                        name,
-                        phone,
-                        blood,
-                        donation_date))
+                if session['role'] == 'admin':
+                    app.logger.error(
+                        'ADMIN ADDED DONATION: Blood Donated: id = {}, name = {}, blood type = {}, donation date = {}'.format(
+                            id,
+                            name,
+                            phone,
+                            blood,
+                            donation_date))
+                elif session['role'] == 'regular user':
+                    app.logger.error(
+                        'USER ADDED DONATION: Blood Donated: id = {}, name = {}, blood type = {}, donation date = {}'.format(
+                            id,
+                            name,
+                            phone,
+                            blood,
+                            donation_date))
             else:
                 app.logger.error(result[1])
             return render_template('donors.html')
@@ -139,8 +156,12 @@ def requests():
         result = db_operations.get_data(blood, amount, request_date)
         temp = db_operations.showTable()
         if result[0] == 1:
-            app_logger.error(
-                'ADMIN REQUESTED BLOOD: blood type = {}, amount = {}'.format(blood, amount))
+            if session['role'] == 'admin':
+                app_logger.error(
+                    'ADMIN REQUESTED BLOOD: blood type = {}, amount = {}'.format(blood, amount))
+            elif session['role'] == 'regular user':
+                app_logger.error(
+                    'USER REQUESTED BLOOD: blood type = {}, amount = {}'.format(blood, amount))
         else:
             app_logger.error('ERROR: Not enough blood type {}'.format(blood))
         return render_template('requests.html', output_data=temp.items())
